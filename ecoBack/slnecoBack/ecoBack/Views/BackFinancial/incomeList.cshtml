@@ -1,0 +1,111 @@
+﻿
+@{
+    ViewBag.Title = "incomeKeyIn";
+}
+
+<h2>incomeKeyIn</h2>
+
+<link rel="stylesheet" href="~/style/B_payKeyIn.css">
+<link rel="stylesheet" href="~/style/payList.css">
+<style>
+    .t1 {
+        width: 100px;
+        float: left;
+        text-align: right;
+        margin-right: 5px;
+    }
+</style>
+<nav>
+    @Html.ActionLink("A.新增", "incomeKeyIn", "BackFinancial", new { }, new { @class = "btn btn-success" })
+    @Html.ActionLink("M.修改", "incomeEdit", "BackFinancial", new { }, new { @class = "btn btn-success" })
+    <button id="modify">M.修改</button>
+    <button id="delete">D.刪除</button>
+</nav>
+<form action="">
+    <label for="numData">
+        顯示
+        <select name="numData" id="numData">
+            <option value="5">5</option>
+            <option value="10">10</option>
+            <option value="20">20</option>
+        </select>
+        資料
+    </label>
+    <label for="fromD">開始日期:</label>
+    <input id="fromD" type="date" name="fromD">
+    <label for="endD">結束日期:</label>
+    <input id="endD" type="date" name="endD">
+    <input type="search" name="search" id="search" class="light-table-filter" data-table="order-table" placeholder="  輸入關鍵字">
+    <input type="submit" value="查詢">
+</form>
+
+
+<table class="order-table">
+    <thead>
+        <tr>
+            <th>流水編號</th>
+            <th>入賬日期</th>
+            <th>類別</th>
+            <th>名稱</th>
+            <th>金額</th>
+            <th>付款人</th>
+            <th>收款人</th>
+            <th>交代事項</th>
+        </tr>
+    </thead>
+    <tbody>
+        <tr>
+            <td>105</td>
+            <td>2020/07/01</td>
+            <td>管理費</td>
+            <td>管理費</td>
+            <td>3685429</td>
+            <td>住戶</td>
+            <td>管委會</td>
+            <td>2020年4-6月的管理費</td>
+        </tr>
+        <tr>
+            <td>104</td>
+            <td>2020/05/08</td>
+            <td>管理費</td>
+            <td>利息</td>
+            <td>429</td>
+            <td>瑞士銀行</td>
+            <td>管委會</td>
+            <td>2019年存款利息</td>
+        </tr>
+        <tr>
+            <td>103</td>
+            <td>2020/01/05</td>
+            <td>場地租借</td>
+            <td>基地台</td>
+            <td>685429</td>
+            <td>中華電信</td>
+            <td>管委會</td>
+            <td>2019年1-12月架設基地台的租借費</td>
+        </tr>
+        <tr>
+            <td>102</td>
+            <td>2019/09/08</td>
+            <td>活動</td>
+            <td>中秋烤肉</td>
+            <td>5429</td>
+            <td>活動餘額</td>
+            <td>管委會</td>
+            <td>2020年中秋烤肉活動剩餘款</td>
+        </tr>
+        <tr>
+            <td>101</td>
+            <td>2019/03/28</td>
+            <td>廣告</td>
+            <td>電梯內廣告</td>
+            <td>30000</td>
+            <td>海龜老人會</td>
+            <td>管委會</td>
+            <td>A-H棟電梯內刊登廣告</td>
+        </tr>
+    </tbody>
+</table>
+<div id="incomeChart" style="margin: 0 auto; width: 900px;height: 500px;"></div>
+<script src="~/js/payList.js"></script>
+<script src="~/js/incomePie.js"></script>

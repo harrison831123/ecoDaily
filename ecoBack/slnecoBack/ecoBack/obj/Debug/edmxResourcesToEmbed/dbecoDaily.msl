@@ -1,0 +1,246 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<Mapping Space="C-S" xmlns="http://schemas.microsoft.com/ado/2009/11/mapping/cs">
+  <EntityContainerMapping StorageEntityContainer="dbecoDailyModelStoreContainer" CdmEntityContainer="dbecoDailyEntities2">
+    <EntitySetMapping Name="tAnnouncement">
+      <EntityTypeMapping TypeName="dbecoDailyModel.tAnnouncement">
+        <MappingFragment StoreEntitySet="tAnnouncement">
+          <ScalarProperty Name="fAnnouncementId" ColumnName="fAnnouncementId" />
+          <ScalarProperty Name="fAnnTitle" ColumnName="fAnnTitle" />
+          <ScalarProperty Name="fAnnDate" ColumnName="fAnnDate" />
+          <ScalarProperty Name="fUserId" ColumnName="fUserId" />
+          <ScalarProperty Name="fAnnContent" ColumnName="fAnnContent" />
+          <ScalarProperty Name="fClickRate" ColumnName="fClickRate" />
+          <ScalarProperty Name="fAnnFilePath" ColumnName="fAnnFilePath" />
+        </MappingFragment>
+      </EntityTypeMapping>
+    </EntitySetMapping>
+    <EntitySetMapping Name="tCandidate">
+      <EntityTypeMapping TypeName="dbecoDailyModel.tCandidate">
+        <MappingFragment StoreEntitySet="tCandidate">
+          <ScalarProperty Name="fCandId" ColumnName="fCandId" />
+          <ScalarProperty Name="fUserId" ColumnName="fUserId" />
+          <ScalarProperty Name="fVId" ColumnName="fVId" />
+          <ScalarProperty Name="fName" ColumnName="fName" />
+          <ScalarProperty Name="fInfo" ColumnName="fInfo" />
+        </MappingFragment>
+      </EntityTypeMapping>
+    </EntitySetMapping>
+    <EntitySetMapping Name="tCargo">
+      <EntityTypeMapping TypeName="dbecoDailyModel.tCargo">
+        <MappingFragment StoreEntitySet="tCargo">
+          <ScalarProperty Name="fCargoId" ColumnName="fCargoId" />
+          <ScalarProperty Name="fShipCompany" ColumnName="fShipCompany" />
+          <ScalarProperty Name="fSender" ColumnName="fSender" />
+          <ScalarProperty Name="fUserId" ColumnName="fUserId" />
+          <ScalarProperty Name="fCargoType" ColumnName="fCargoType" />
+          <ScalarProperty Name="fArriveDate" ColumnName="fArriveDate" />
+          <ScalarProperty Name="fReceiveOrNot" ColumnName="fReceiveOrNot" />
+          <ScalarProperty Name="fSignaturePath" ColumnName="fSignaturePath" />
+        </MappingFragment>
+      </EntityTypeMapping>
+    </EntitySetMapping>
+    <EntitySetMapping Name="tEvent">
+      <EntityTypeMapping TypeName="dbecoDailyModel.tEvent">
+        <MappingFragment StoreEntitySet="tEvent">
+          <ScalarProperty Name="fEventId" ColumnName="fEventId" />
+          <ScalarProperty Name="fEventTitle" ColumnName="fEventTitle" />
+          <ScalarProperty Name="fEventFromDay" ColumnName="fEventFromDay" />
+          <ScalarProperty Name="fEventEndDate" ColumnName="fEventEndDate" />
+          <ScalarProperty Name="fUserId" ColumnName="fUserId" />
+          <ScalarProperty Name="fEventImgPath" ColumnName="fEventImgPath" />
+          <ScalarProperty Name="fEventDay" ColumnName="fEventDay" />
+          <ScalarProperty Name="fEventTime" ColumnName="fEventTime" />
+          <ScalarProperty Name="fEventLocation" ColumnName="fEventLocation" />
+          <ScalarProperty Name="fEventDescription" ColumnName="fEventDescription" />
+          <ScalarProperty Name="fEventFee" ColumnName="fEventFee" />
+          <ScalarProperty Name="fnumCourse" ColumnName="fnumCourse" />
+          <ScalarProperty Name="fRemark" ColumnName="fRemark" />
+        </MappingFragment>
+      </EntityTypeMapping>
+    </EntitySetMapping>
+    <EntitySetMapping Name="tEventRegister">
+      <EntityTypeMapping TypeName="dbecoDailyModel.tEventRegister">
+        <MappingFragment StoreEntitySet="tEventRegister">
+          <ScalarProperty Name="fEventRegisterId" ColumnName="fEventRegisterId" />
+          <ScalarProperty Name="fUserId" ColumnName="fUserId" />
+          <ScalarProperty Name="fEventId" ColumnName="fEventId" />
+          <ScalarProperty Name="fCategory" ColumnName="fCategory" />
+          <ScalarProperty Name="fnumAttendPeople" ColumnName="fnumAttendPeople" />
+          <ScalarProperty Name="fAttendName" ColumnName="fAttendName" />
+          <ScalarProperty Name="ferBirthday" ColumnName="ferBirthday" />
+          <ScalarProperty Name="ferIdentity" ColumnName="ferIdentity" />
+          <ScalarProperty Name="ferGender" ColumnName="ferGender" />
+          <ScalarProperty Name="ferEducation" ColumnName="ferEducation" />
+          <ScalarProperty Name="ferOccupation" ColumnName="ferOccupation" />
+          <ScalarProperty Name="ferBloodType" ColumnName="ferBloodType" />
+          <ScalarProperty Name="ferMarrige" ColumnName="ferMarrige" />
+        </MappingFragment>
+      </EntityTypeMapping>
+    </EntitySetMapping>
+    <EntitySetMapping Name="tForum">
+      <EntityTypeMapping TypeName="dbecoDailyModel.tForum">
+        <MappingFragment StoreEntitySet="tForum">
+          <ScalarProperty Name="fForumId" ColumnName="fForumId" />
+          <ScalarProperty Name="fUserId" ColumnName="fUserId" />
+          <ScalarProperty Name="fPostDate" ColumnName="fPostDate" />
+          <ScalarProperty Name="fWriter" ColumnName="fWriter" />
+          <ScalarProperty Name="fForumTitle" ColumnName="fForumTitle" />
+          <ScalarProperty Name="fForumContent" ColumnName="fForumContent" />
+          <ScalarProperty Name="fForumLike" ColumnName="fForumLike" />
+          <ScalarProperty Name="fForumImage" ColumnName="fForumImage" />
+        </MappingFragment>
+      </EntityTypeMapping>
+    </EntitySetMapping>
+    <EntitySetMapping Name="tForumComment">
+      <EntityTypeMapping TypeName="dbecoDailyModel.tForumComment">
+        <MappingFragment StoreEntitySet="tForumComment">
+          <ScalarProperty Name="fForumCommentId" ColumnName="fForumCommentId" />
+          <ScalarProperty Name="fForumId" ColumnName="fForumId" />
+          <ScalarProperty Name="fUserId" ColumnName="fUserId" />
+          <ScalarProperty Name="fForumComment" ColumnName="fForumComment" />
+        </MappingFragment>
+      </EntityTypeMapping>
+    </EntitySetMapping>
+    <EntitySetMapping Name="tIncome">
+      <EntityTypeMapping TypeName="dbecoDailyModel.tIncome">
+        <MappingFragment StoreEntitySet="tIncome">
+          <ScalarProperty Name="fIcId" ColumnName="fIcId" />
+          <ScalarProperty Name="fIcDate" ColumnName="fIcDate" />
+          <ScalarProperty Name="fIcType" ColumnName="fIcType" />
+          <ScalarProperty Name="fIcItem" ColumnName="fIcItem" />
+          <ScalarProperty Name="fIcMoney" ColumnName="fIcMoney" />
+          <ScalarProperty Name="fIcSource" ColumnName="fIcSource" />
+          <ScalarProperty Name="fPayee" ColumnName="fPayee" />
+          <ScalarProperty Name="fRemark" ColumnName="fRemark" />
+        </MappingFragment>
+      </EntityTypeMapping>
+    </EntitySetMapping>
+    <EntitySetMapping Name="tMail">
+      <EntityTypeMapping TypeName="dbecoDailyModel.tMail">
+        <MappingFragment StoreEntitySet="tMail">
+          <ScalarProperty Name="fMailId" ColumnName="fMailId" />
+          <ScalarProperty Name="fSenderId" ColumnName="fSenderId" />
+          <ScalarProperty Name="fReceiverId" ColumnName="fReceiverId" />
+          <ScalarProperty Name="fSendDate" ColumnName="fSendDate" />
+          <ScalarProperty Name="fMailTitle" ColumnName="fMailTitle" />
+          <ScalarProperty Name="fMailContent" ColumnName="fMailContent" />
+          <ScalarProperty Name="fOpened" ColumnName="fOpened" />
+        </MappingFragment>
+      </EntityTypeMapping>
+    </EntitySetMapping>
+    <EntitySetMapping Name="tManagementFee">
+      <EntityTypeMapping TypeName="dbecoDailyModel.tManagementFee">
+        <MappingFragment StoreEntitySet="tManagementFee">
+          <ScalarProperty Name="fManagementFeeId" ColumnName="fManagementFeeId" />
+          <ScalarProperty Name="fManagementFeePeriod" ColumnName="fManagementFeePeriod" />
+          <ScalarProperty Name="fUserId" ColumnName="fUserId" />
+          <ScalarProperty Name="fHandInOrNot" ColumnName="fHandInOrNot" />
+        </MappingFragment>
+      </EntityTypeMapping>
+    </EntitySetMapping>
+    <EntitySetMapping Name="tMemberData">
+      <EntityTypeMapping TypeName="dbecoDailyModel.tMemberData">
+        <MappingFragment StoreEntitySet="tMemberData">
+          <ScalarProperty Name="fUserId" ColumnName="fUserId" />
+          <ScalarProperty Name="fBuilding" ColumnName="fBuilding" />
+          <ScalarProperty Name="fPassword" ColumnName="fPassword" />
+          <ScalarProperty Name="fUserName" ColumnName="fUserName" />
+          <ScalarProperty Name="fTelePhone" ColumnName="fTelePhone" />
+          <ScalarProperty Name="fCellPhone" ColumnName="fCellPhone" />
+          <ScalarProperty Name="fHereAddress" ColumnName="fHereAddress" />
+          <ScalarProperty Name="fResidenceAddress" ColumnName="fResidenceAddress" />
+          <ScalarProperty Name="fEmail" ColumnName="fEmail" />
+          <ScalarProperty Name="fUpdateDate" ColumnName="fUpdateDate" />
+          <ScalarProperty Name="fPersonId" ColumnName="fPersonId" />
+          <ScalarProperty Name="fBirthday" ColumnName="fBirthday" />
+          <ScalarProperty Name="fnumPeople" ColumnName="fnumPeople" />
+          <ScalarProperty Name="fHouseSize" ColumnName="fHouseSize" />
+          <ScalarProperty Name="fPublicUsageSize" ColumnName="fPublicUsageSize" />
+          <ScalarProperty Name="fnumCarParking" ColumnName="fnumCarParking" />
+          <ScalarProperty Name="fnumMotorParking" ColumnName="fnumMotorParking" />
+          <ScalarProperty Name="fManagementFee" ColumnName="fManagementFee" />
+          <ScalarProperty Name="fParkingClean" ColumnName="fParkingClean" />
+          <ScalarProperty Name="fLivingType" ColumnName="fLivingType" />
+          <ScalarProperty Name="fAuthority" ColumnName="fAuthority" />
+          <ScalarProperty Name="fRemark" ColumnName="fRemark" />
+          <ScalarProperty Name="fProfileImgPath" ColumnName="fProfileImgPath" />
+        </MappingFragment>
+      </EntityTypeMapping>
+    </EntitySetMapping>
+    <EntitySetMapping Name="tNaturalGas">
+      <EntityTypeMapping TypeName="dbecoDailyModel.tNaturalGas">
+        <MappingFragment StoreEntitySet="tNaturalGas">
+          <ScalarProperty Name="fGasId" ColumnName="fGasId" />
+          <ScalarProperty Name="fUserId" ColumnName="fUserId" />
+          <ScalarProperty Name="fCurrentReading" ColumnName="fCurrentReading" />
+          <ScalarProperty Name="fGasPeriod" ColumnName="fGasPeriod" />
+          <ScalarProperty Name="fGasHandInOrNot" ColumnName="fGasHandInOrNot" />
+        </MappingFragment>
+      </EntityTypeMapping>
+    </EntitySetMapping>
+    <EntitySetMapping Name="tPay">
+      <EntityTypeMapping TypeName="dbecoDailyModel.tPay">
+        <MappingFragment StoreEntitySet="tPay">
+          <ScalarProperty Name="fPayId" ColumnName="fPayId" />
+          <ScalarProperty Name="fapyDate" ColumnName="fapyDate" />
+          <ScalarProperty Name="fpayType" ColumnName="fpayType" />
+          <ScalarProperty Name="fpayVendor" ColumnName="fpayVendor" />
+          <ScalarProperty Name="fpayVendorPhone" ColumnName="fpayVendorPhone" />
+          <ScalarProperty Name="fProductName" ColumnName="fProductName" />
+          <ScalarProperty Name="fProductPurpose" ColumnName="fProductPurpose" />
+          <ScalarProperty Name="fCount" ColumnName="fCount" />
+          <ScalarProperty Name="fPrice" ColumnName="fPrice" />
+          <ScalarProperty Name="fTaxType" ColumnName="fTaxType" />
+          <ScalarProperty Name="fSum" ColumnName="fSum" />
+          <ScalarProperty Name="fPayType1" ColumnName="fPayType" />
+          <ScalarProperty Name="fHandInDate" ColumnName="fHandInDate" />
+          <ScalarProperty Name="fExpDate" ColumnName="fExpDate" />
+          <ScalarProperty Name="fBuyer" ColumnName="fBuyer" />
+          <ScalarProperty Name="fRemark" ColumnName="fRemark" />
+        </MappingFragment>
+      </EntityTypeMapping>
+    </EntitySetMapping>
+    <EntitySetMapping Name="tReservation">
+      <EntityTypeMapping TypeName="dbecoDailyModel.tReservation">
+        <MappingFragment StoreEntitySet="tReservation">
+          <ScalarProperty Name="fReservationId" ColumnName="fReservationId" />
+          <ScalarProperty Name="fReservationType" ColumnName="fReservationType" />
+          <ScalarProperty Name="fUserId" ColumnName="fUserId" />
+          <ScalarProperty Name="fReservationDate" ColumnName="fReservationDate" />
+          <ScalarProperty Name="fReservationTimeId" ColumnName="fReservationTimeId" />
+          <ScalarProperty Name="fnumReservation" ColumnName="fnumReservation" />
+          <ScalarProperty Name="fRemark" ColumnName="fRemark" />
+        </MappingFragment>
+      </EntityTypeMapping>
+    </EntitySetMapping>
+    <EntitySetMapping Name="tReservationTime">
+      <EntityTypeMapping TypeName="dbecoDailyModel.tReservationTime">
+        <MappingFragment StoreEntitySet="tReservationTime">
+          <ScalarProperty Name="fReservationTimeId" ColumnName="fReservationTimeId" />
+          <ScalarProperty Name="fReservationTime" ColumnName="fReservationTime" />
+        </MappingFragment>
+      </EntityTypeMapping>
+    </EntitySetMapping>
+    <EntitySetMapping Name="tUserVote">
+      <EntityTypeMapping TypeName="dbecoDailyModel.tUserVote">
+        <MappingFragment StoreEntitySet="tUserVote">
+          <ScalarProperty Name="fUVId" ColumnName="fUVId" />
+          <ScalarProperty Name="fVId" ColumnName="fVId" />
+          <ScalarProperty Name="fUserId" ColumnName="fUserId" />
+          <ScalarProperty Name="fSelectCandidate" ColumnName="fSelectCandidate" />
+        </MappingFragment>
+      </EntityTypeMapping>
+    </EntitySetMapping>
+    <EntitySetMapping Name="tVote">
+      <EntityTypeMapping TypeName="dbecoDailyModel.tVote">
+        <MappingFragment StoreEntitySet="tVote">
+          <ScalarProperty Name="fVId" ColumnName="fVId" />
+          <ScalarProperty Name="fVfromDate" ColumnName="fVfromDate" />
+          <ScalarProperty Name="fVendDate" ColumnName="fVendDate" />
+          <ScalarProperty Name="fVtilte" ColumnName="fVtilte" />
+          <ScalarProperty Name="fVcontent" ColumnName="fVcontent" />
+        </MappingFragment>
+      </EntityTypeMapping>
+    </EntitySetMapping>
+  </EntityContainerMapping>
+</Mapping>

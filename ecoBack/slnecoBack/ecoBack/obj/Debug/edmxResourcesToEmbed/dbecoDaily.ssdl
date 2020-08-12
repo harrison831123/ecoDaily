@@ -1,0 +1,550 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<Schema Namespace="dbecoDailyModel.Store" Provider="System.Data.SqlClient" ProviderManifestToken="2012" Alias="Self" xmlns:store="http://schemas.microsoft.com/ado/2007/12/edm/EntityStoreSchemaGenerator" xmlns:customannotation="http://schemas.microsoft.com/ado/2013/11/edm/customannotation" xmlns="http://schemas.microsoft.com/ado/2009/11/edm/ssdl">
+  <EntityType Name="tAnnouncement">
+    <Key>
+      <PropertyRef Name="fAnnouncementId" />
+    </Key>
+    <Property Name="fAnnouncementId" Type="int" StoreGeneratedPattern="Identity" Nullable="false" />
+    <Property Name="fAnnTitle" Type="nvarchar" MaxLength="50" />
+    <Property Name="fAnnDate" Type="datetime" />
+    <Property Name="fUserId" Type="nvarchar" MaxLength="10" />
+    <Property Name="fAnnContent" Type="nvarchar" MaxLength="1000" />
+    <Property Name="fClickRate" Type="int" />
+    <Property Name="fAnnFilePath" Type="nvarchar" MaxLength="100" />
+  </EntityType>
+  <EntityType Name="tCandidate">
+    <Key>
+      <PropertyRef Name="fCandId" />
+    </Key>
+    <Property Name="fCandId" Type="int" StoreGeneratedPattern="Identity" Nullable="false" />
+    <Property Name="fUserId" Type="nvarchar" MaxLength="10" />
+    <Property Name="fVId" Type="int" />
+    <Property Name="fName" Type="nvarchar" MaxLength="10" />
+    <Property Name="fInfo" Type="nvarchar" MaxLength="300" />
+  </EntityType>
+  <EntityType Name="tCargo">
+    <Key>
+      <PropertyRef Name="fCargoId" />
+    </Key>
+    <Property Name="fCargoId" Type="int" StoreGeneratedPattern="Identity" Nullable="false" />
+    <Property Name="fShipCompany" Type="nvarchar" MaxLength="20" />
+    <Property Name="fSender" Type="nvarchar" MaxLength="20" />
+    <Property Name="fUserId" Type="nvarchar" MaxLength="10" />
+    <Property Name="fCargoType" Type="nvarchar" MaxLength="20" />
+    <Property Name="fArriveDate" Type="datetime" />
+    <Property Name="fReceiveOrNot" Type="int" />
+    <Property Name="fSignaturePath" Type="nvarchar" MaxLength="200" />
+  </EntityType>
+  <EntityType Name="tEvent">
+    <Key>
+      <PropertyRef Name="fEventId" />
+    </Key>
+    <Property Name="fEventId" Type="int" StoreGeneratedPattern="Identity" Nullable="false" />
+    <Property Name="fEventTitle" Type="nvarchar" MaxLength="50" />
+    <Property Name="fEventFromDay" Type="datetime" />
+    <Property Name="fEventEndDate" Type="datetime" />
+    <Property Name="fUserId" Type="nvarchar" MaxLength="10" />
+    <Property Name="fEventImgPath" Type="nvarchar" MaxLength="100" />
+    <Property Name="fEventDay" Type="nvarchar" MaxLength="50" />
+    <Property Name="fEventTime" Type="nvarchar" MaxLength="50" />
+    <Property Name="fEventLocation" Type="nvarchar" MaxLength="50" />
+    <Property Name="fEventDescription" Type="nvarchar" MaxLength="500" />
+    <Property Name="fEventFee" Type="int" />
+    <Property Name="fnumCourse" Type="int" />
+    <Property Name="fRemark" Type="nvarchar" MaxLength="200" />
+  </EntityType>
+  <EntityType Name="tEventRegister">
+    <Key>
+      <PropertyRef Name="fEventRegisterId" />
+    </Key>
+    <Property Name="fEventRegisterId" Type="int" StoreGeneratedPattern="Identity" Nullable="false" />
+    <Property Name="fUserId" Type="nvarchar" MaxLength="10" />
+    <Property Name="fEventId" Type="int" />
+    <Property Name="fCategory" Type="nvarchar" MaxLength="10" />
+    <Property Name="fnumAttendPeople" Type="int" />
+    <Property Name="fAttendName" Type="nvarchar" MaxLength="10" />
+    <Property Name="ferBirthday" Type="date" />
+    <Property Name="ferIdentity" Type="nvarchar" MaxLength="10" />
+    <Property Name="ferGender" Type="nvarchar" MaxLength="4" />
+    <Property Name="ferEducation" Type="nvarchar" MaxLength="30" />
+    <Property Name="ferOccupation" Type="nvarchar" MaxLength="30" />
+    <Property Name="ferBloodType" Type="nvarchar" MaxLength="4" />
+    <Property Name="ferMarrige" Type="nvarchar" MaxLength="6" />
+  </EntityType>
+  <EntityType Name="tForum">
+    <Key>
+      <PropertyRef Name="fForumId" />
+    </Key>
+    <Property Name="fForumId" Type="int" StoreGeneratedPattern="Identity" Nullable="false" />
+    <Property Name="fUserId" Type="nvarchar" MaxLength="10" />
+    <Property Name="fPostDate" Type="datetime" />
+    <Property Name="fWriter" Type="nvarchar" MaxLength="50" />
+    <Property Name="fForumTitle" Type="nvarchar" MaxLength="100" />
+    <Property Name="fForumContent" Type="nvarchar" MaxLength="1000" />
+    <Property Name="fForumLike" Type="int" />
+    <Property Name="fForumImage" Type="nvarchar" MaxLength="100" />
+  </EntityType>
+  <EntityType Name="tForumComment">
+    <Key>
+      <PropertyRef Name="fForumCommentId" />
+    </Key>
+    <Property Name="fForumCommentId" Type="int" StoreGeneratedPattern="Identity" Nullable="false" />
+    <Property Name="fForumId" Type="int" />
+    <Property Name="fUserId" Type="nvarchar" MaxLength="10" />
+    <Property Name="fForumComment" Type="nvarchar" MaxLength="200" />
+  </EntityType>
+  <EntityType Name="tIncome">
+    <Key>
+      <PropertyRef Name="fIcId" />
+    </Key>
+    <Property Name="fIcId" Type="int" StoreGeneratedPattern="Identity" Nullable="false" />
+    <Property Name="fIcDate" Type="datetime" />
+    <Property Name="fIcType" Type="nvarchar" MaxLength="20" />
+    <Property Name="fIcItem" Type="nvarchar" MaxLength="20" />
+    <Property Name="fIcMoney" Type="int" />
+    <Property Name="fIcSource" Type="nvarchar" MaxLength="20" />
+    <Property Name="fPayee" Type="nvarchar" MaxLength="20" />
+    <Property Name="fRemark" Type="nvarchar" MaxLength="20" />
+  </EntityType>
+  <EntityType Name="tMail">
+    <Key>
+      <PropertyRef Name="fMailId" />
+    </Key>
+    <Property Name="fMailId" Type="int" StoreGeneratedPattern="Identity" Nullable="false" />
+    <Property Name="fSenderId" Type="nvarchar" MaxLength="10" />
+    <Property Name="fReceiverId" Type="nvarchar" MaxLength="10" />
+    <Property Name="fSendDate" Type="datetime" />
+    <Property Name="fMailTitle" Type="nvarchar" MaxLength="100" />
+    <Property Name="fMailContent" Type="nvarchar" MaxLength="300" />
+    <Property Name="fOpened" Type="int" />
+  </EntityType>
+  <EntityType Name="tManagementFee">
+    <Key>
+      <PropertyRef Name="fManagementFeeId" />
+    </Key>
+    <Property Name="fManagementFeeId" Type="int" StoreGeneratedPattern="Identity" Nullable="false" />
+    <Property Name="fManagementFeePeriod" Type="date" />
+    <Property Name="fUserId" Type="nvarchar" MaxLength="10" />
+    <Property Name="fHandInOrNot" Type="int" />
+  </EntityType>
+  <EntityType Name="tMemberData">
+    <Key>
+      <PropertyRef Name="fUserId" />
+    </Key>
+    <Property Name="fUserId" Type="nvarchar" MaxLength="10" Nullable="false" />
+    <Property Name="fBuilding" Type="nvarchar" MaxLength="10" />
+    <Property Name="fPassword" Type="nvarchar" MaxLength="20" />
+    <Property Name="fUserName" Type="nvarchar" MaxLength="10" />
+    <Property Name="fTelePhone" Type="nvarchar" MaxLength="10" />
+    <Property Name="fCellPhone" Type="nvarchar" MaxLength="10" />
+    <Property Name="fHereAddress" Type="nvarchar" MaxLength="80" />
+    <Property Name="fResidenceAddress" Type="nvarchar" MaxLength="80" />
+    <Property Name="fEmail" Type="nvarchar" MaxLength="50" />
+    <Property Name="fUpdateDate" Type="date" />
+    <Property Name="fPersonId" Type="nvarchar" MaxLength="10" />
+    <Property Name="fBirthday" Type="date" />
+    <Property Name="fnumPeople" Type="int" />
+    <Property Name="fHouseSize" Type="float" />
+    <Property Name="fPublicUsageSize" Type="float" />
+    <Property Name="fnumCarParking" Type="int" />
+    <Property Name="fnumMotorParking" Type="int" />
+    <Property Name="fManagementFee" Type="int" />
+    <Property Name="fParkingClean" Type="int" />
+    <Property Name="fLivingType" Type="nvarchar" MaxLength="4" />
+    <Property Name="fAuthority" Type="int" />
+    <Property Name="fRemark" Type="nvarchar" MaxLength="200" />
+    <Property Name="fProfileImgPath" Type="nvarchar" MaxLength="100" />
+  </EntityType>
+  <EntityType Name="tNaturalGas">
+    <Key>
+      <PropertyRef Name="fGasId" />
+    </Key>
+    <Property Name="fGasId" Type="int" StoreGeneratedPattern="Identity" Nullable="false" />
+    <Property Name="fUserId" Type="nvarchar" MaxLength="10" />
+    <Property Name="fCurrentReading" Type="int" />
+    <Property Name="fGasPeriod" Type="date" />
+    <Property Name="fGasHandInOrNot" Type="int" />
+  </EntityType>
+  <EntityType Name="tPay">
+    <Key>
+      <PropertyRef Name="fPayId" />
+    </Key>
+    <Property Name="fPayId" Type="int" StoreGeneratedPattern="Identity" Nullable="false" />
+    <Property Name="fapyDate" Type="datetime" />
+    <Property Name="fpayType" Type="nvarchar" MaxLength="10" />
+    <Property Name="fpayVendor" Type="nvarchar" MaxLength="50" />
+    <Property Name="fpayVendorPhone" Type="nvarchar" MaxLength="12" />
+    <Property Name="fProductName" Type="nvarchar" MaxLength="20" />
+    <Property Name="fProductPurpose" Type="nvarchar" MaxLength="50" />
+    <Property Name="fCount" Type="int" />
+    <Property Name="fPrice" Type="int" />
+    <Property Name="fTaxType" Type="nvarchar" MaxLength="10" />
+    <Property Name="fSum" Type="int" />
+    <Property Name="fPayType" Type="nvarchar" MaxLength="10" />
+    <Property Name="fHandInDate" Type="datetime" />
+    <Property Name="fExpDate" Type="datetime" />
+    <Property Name="fBuyer" Type="nvarchar" MaxLength="20" />
+    <Property Name="fRemark" Type="nvarchar" MaxLength="200" />
+  </EntityType>
+  <EntityType Name="tReservation">
+    <Key>
+      <PropertyRef Name="fReservationId" />
+    </Key>
+    <Property Name="fReservationId" Type="int" StoreGeneratedPattern="Identity" Nullable="false" />
+    <Property Name="fReservationType" Type="nvarchar" MaxLength="20" />
+    <Property Name="fUserId" Type="nvarchar" MaxLength="10" />
+    <Property Name="fReservationDate" Type="date" />
+    <Property Name="fReservationTimeId" Type="int" />
+    <Property Name="fnumReservation" Type="int" />
+    <Property Name="fRemark" Type="nvarchar" MaxLength="200" />
+  </EntityType>
+  <EntityType Name="tReservationTime">
+    <Key>
+      <PropertyRef Name="fReservationTimeId" />
+    </Key>
+    <Property Name="fReservationTimeId" Type="int" StoreGeneratedPattern="Identity" Nullable="false" />
+    <Property Name="fReservationTime" Type="nvarchar" MaxLength="20" />
+  </EntityType>
+  <EntityType Name="tUserVote">
+    <Key>
+      <PropertyRef Name="fUVId" />
+    </Key>
+    <Property Name="fUVId" Type="int" StoreGeneratedPattern="Identity" Nullable="false" />
+    <Property Name="fVId" Type="int" />
+    <Property Name="fUserId" Type="nvarchar" MaxLength="10" />
+    <Property Name="fSelectCandidate" Type="int" />
+  </EntityType>
+  <EntityType Name="tVote">
+    <Key>
+      <PropertyRef Name="fVId" />
+    </Key>
+    <Property Name="fVId" Type="int" StoreGeneratedPattern="Identity" Nullable="false" />
+    <Property Name="fVfromDate" Type="nvarchar" MaxLength="20" />
+    <Property Name="fVendDate" Type="nvarchar" MaxLength="20" />
+    <Property Name="fVtilte" Type="nvarchar" MaxLength="100" />
+    <Property Name="fVcontent" Type="nvarchar" MaxLength="100" />
+  </EntityType>
+  <Association Name="FK__tAnnounce__fUser__2D27B809">
+    <End Role="tMemberData" Type="Self.tMemberData" Multiplicity="0..1" />
+    <End Role="tAnnouncement" Type="Self.tAnnouncement" Multiplicity="*" />
+    <ReferentialConstraint>
+      <Principal Role="tMemberData">
+        <PropertyRef Name="fUserId" />
+      </Principal>
+      <Dependent Role="tAnnouncement">
+        <PropertyRef Name="fUserId" />
+      </Dependent>
+    </ReferentialConstraint>
+  </Association>
+  <Association Name="FK__tCandidat__fUser__48CFD27E">
+    <End Role="tMemberData" Type="Self.tMemberData" Multiplicity="0..1" />
+    <End Role="tCandidate" Type="Self.tCandidate" Multiplicity="*" />
+    <ReferentialConstraint>
+      <Principal Role="tMemberData">
+        <PropertyRef Name="fUserId" />
+      </Principal>
+      <Dependent Role="tCandidate">
+        <PropertyRef Name="fUserId" />
+      </Dependent>
+    </ReferentialConstraint>
+  </Association>
+  <Association Name="FK__tCandidate__fVId__49C3F6B7">
+    <End Role="tVote" Type="Self.tVote" Multiplicity="0..1" />
+    <End Role="tCandidate" Type="Self.tCandidate" Multiplicity="*" />
+    <ReferentialConstraint>
+      <Principal Role="tVote">
+        <PropertyRef Name="fVId" />
+      </Principal>
+      <Dependent Role="tCandidate">
+        <PropertyRef Name="fVId" />
+      </Dependent>
+    </ReferentialConstraint>
+  </Association>
+  <Association Name="FK__tCargo__fUserId__440B1D61">
+    <End Role="tMemberData" Type="Self.tMemberData" Multiplicity="0..1" />
+    <End Role="tCargo" Type="Self.tCargo" Multiplicity="*" />
+    <ReferentialConstraint>
+      <Principal Role="tMemberData">
+        <PropertyRef Name="fUserId" />
+      </Principal>
+      <Dependent Role="tCargo">
+        <PropertyRef Name="fUserId" />
+      </Dependent>
+    </ReferentialConstraint>
+  </Association>
+  <Association Name="FK__tEvent__fUserId__267ABA7A">
+    <End Role="tMemberData" Type="Self.tMemberData" Multiplicity="0..1" />
+    <End Role="tEvent" Type="Self.tEvent" Multiplicity="*" />
+    <ReferentialConstraint>
+      <Principal Role="tMemberData">
+        <PropertyRef Name="fUserId" />
+      </Principal>
+      <Dependent Role="tEvent">
+        <PropertyRef Name="fUserId" />
+      </Dependent>
+    </ReferentialConstraint>
+  </Association>
+  <Association Name="FK__tEventReg__fEven__29572725">
+    <End Role="tEvent" Type="Self.tEvent" Multiplicity="0..1" />
+    <End Role="tEventRegister" Type="Self.tEventRegister" Multiplicity="*" />
+    <ReferentialConstraint>
+      <Principal Role="tEvent">
+        <PropertyRef Name="fEventId" />
+      </Principal>
+      <Dependent Role="tEventRegister">
+        <PropertyRef Name="fEventId" />
+      </Dependent>
+    </ReferentialConstraint>
+  </Association>
+  <Association Name="FK__tEventReg__fUser__2A4B4B5E">
+    <End Role="tMemberData" Type="Self.tMemberData" Multiplicity="0..1" />
+    <End Role="tEventRegister" Type="Self.tEventRegister" Multiplicity="*" />
+    <ReferentialConstraint>
+      <Principal Role="tMemberData">
+        <PropertyRef Name="fUserId" />
+      </Principal>
+      <Dependent Role="tEventRegister">
+        <PropertyRef Name="fUserId" />
+      </Dependent>
+    </ReferentialConstraint>
+  </Association>
+  <Association Name="FK__tForum__fUserId__36B12243">
+    <End Role="tMemberData" Type="Self.tMemberData" Multiplicity="0..1" />
+    <End Role="tForum" Type="Self.tForum" Multiplicity="*" />
+    <ReferentialConstraint>
+      <Principal Role="tMemberData">
+        <PropertyRef Name="fUserId" />
+      </Principal>
+      <Dependent Role="tForum">
+        <PropertyRef Name="fUserId" />
+      </Dependent>
+    </ReferentialConstraint>
+  </Association>
+  <Association Name="FK__tForumCom__fForu__3A81B327">
+    <End Role="tForum" Type="Self.tForum" Multiplicity="0..1" />
+    <End Role="tForumComment" Type="Self.tForumComment" Multiplicity="*" />
+    <ReferentialConstraint>
+      <Principal Role="tForum">
+        <PropertyRef Name="fForumId" />
+      </Principal>
+      <Dependent Role="tForumComment">
+        <PropertyRef Name="fForumId" />
+      </Dependent>
+    </ReferentialConstraint>
+  </Association>
+  <Association Name="FK__tForumCom__fUser__398D8EEE">
+    <End Role="tMemberData" Type="Self.tMemberData" Multiplicity="0..1" />
+    <End Role="tForumComment" Type="Self.tForumComment" Multiplicity="*" />
+    <ReferentialConstraint>
+      <Principal Role="tMemberData">
+        <PropertyRef Name="fUserId" />
+      </Principal>
+      <Dependent Role="tForumComment">
+        <PropertyRef Name="fUserId" />
+      </Dependent>
+    </ReferentialConstraint>
+  </Association>
+  <Association Name="FK__tMail__fReceiver__30F848ED">
+    <End Role="tMemberData" Type="Self.tMemberData" Multiplicity="0..1" />
+    <End Role="tMail" Type="Self.tMail" Multiplicity="*" />
+    <ReferentialConstraint>
+      <Principal Role="tMemberData">
+        <PropertyRef Name="fUserId" />
+      </Principal>
+      <Dependent Role="tMail">
+        <PropertyRef Name="fReceiverId" />
+      </Dependent>
+    </ReferentialConstraint>
+  </Association>
+  <Association Name="FK__tMail__fSenderId__300424B4">
+    <End Role="tMemberData" Type="Self.tMemberData" Multiplicity="0..1" />
+    <End Role="tMail" Type="Self.tMail" Multiplicity="*" />
+    <ReferentialConstraint>
+      <Principal Role="tMemberData">
+        <PropertyRef Name="fUserId" />
+      </Principal>
+      <Dependent Role="tMail">
+        <PropertyRef Name="fSenderId" />
+      </Dependent>
+    </ReferentialConstraint>
+  </Association>
+  <Association Name="FK__tManageme__fUser__33D4B598">
+    <End Role="tMemberData" Type="Self.tMemberData" Multiplicity="0..1" />
+    <End Role="tManagementFee" Type="Self.tManagementFee" Multiplicity="*" />
+    <ReferentialConstraint>
+      <Principal Role="tMemberData">
+        <PropertyRef Name="fUserId" />
+      </Principal>
+      <Dependent Role="tManagementFee">
+        <PropertyRef Name="fUserId" />
+      </Dependent>
+    </ReferentialConstraint>
+  </Association>
+  <Association Name="FK__tNaturalG__fUser__412EB0B6">
+    <End Role="tMemberData" Type="Self.tMemberData" Multiplicity="0..1" />
+    <End Role="tNaturalGas" Type="Self.tNaturalGas" Multiplicity="*" />
+    <ReferentialConstraint>
+      <Principal Role="tMemberData">
+        <PropertyRef Name="fUserId" />
+      </Principal>
+      <Dependent Role="tNaturalGas">
+        <PropertyRef Name="fUserId" />
+      </Dependent>
+    </ReferentialConstraint>
+  </Association>
+  <Association Name="FK__tReservat__fRese__5441852A">
+    <End Role="tReservationTime" Type="Self.tReservationTime" Multiplicity="0..1" />
+    <End Role="tReservation" Type="Self.tReservation" Multiplicity="*" />
+    <ReferentialConstraint>
+      <Principal Role="tReservationTime">
+        <PropertyRef Name="fReservationTimeId" />
+      </Principal>
+      <Dependent Role="tReservation">
+        <PropertyRef Name="fReservationTimeId" />
+      </Dependent>
+    </ReferentialConstraint>
+  </Association>
+  <Association Name="FK__tReservat__fUser__534D60F1">
+    <End Role="tMemberData" Type="Self.tMemberData" Multiplicity="0..1" />
+    <End Role="tReservation" Type="Self.tReservation" Multiplicity="*" />
+    <ReferentialConstraint>
+      <Principal Role="tMemberData">
+        <PropertyRef Name="fUserId" />
+      </Principal>
+      <Dependent Role="tReservation">
+        <PropertyRef Name="fUserId" />
+      </Dependent>
+    </ReferentialConstraint>
+  </Association>
+  <Association Name="FK__tUserVote__fSele__4E88ABD4">
+    <End Role="tCandidate" Type="Self.tCandidate" Multiplicity="0..1" />
+    <End Role="tUserVote" Type="Self.tUserVote" Multiplicity="*" />
+    <ReferentialConstraint>
+      <Principal Role="tCandidate">
+        <PropertyRef Name="fCandId" />
+      </Principal>
+      <Dependent Role="tUserVote">
+        <PropertyRef Name="fSelectCandidate" />
+      </Dependent>
+    </ReferentialConstraint>
+  </Association>
+  <Association Name="FK__tUserVote__fUser__4CA06362">
+    <End Role="tMemberData" Type="Self.tMemberData" Multiplicity="0..1" />
+    <End Role="tUserVote" Type="Self.tUserVote" Multiplicity="*" />
+    <ReferentialConstraint>
+      <Principal Role="tMemberData">
+        <PropertyRef Name="fUserId" />
+      </Principal>
+      <Dependent Role="tUserVote">
+        <PropertyRef Name="fUserId" />
+      </Dependent>
+    </ReferentialConstraint>
+  </Association>
+  <Association Name="FK__tUserVote__fVId__4D94879B">
+    <End Role="tVote" Type="Self.tVote" Multiplicity="0..1" />
+    <End Role="tUserVote" Type="Self.tUserVote" Multiplicity="*" />
+    <ReferentialConstraint>
+      <Principal Role="tVote">
+        <PropertyRef Name="fVId" />
+      </Principal>
+      <Dependent Role="tUserVote">
+        <PropertyRef Name="fVId" />
+      </Dependent>
+    </ReferentialConstraint>
+  </Association>
+  <EntityContainer Name="dbecoDailyModelStoreContainer">
+    <EntitySet Name="tAnnouncement" EntityType="Self.tAnnouncement" Schema="dbo" store:Type="Tables" />
+    <EntitySet Name="tCandidate" EntityType="Self.tCandidate" Schema="dbo" store:Type="Tables" />
+    <EntitySet Name="tCargo" EntityType="Self.tCargo" Schema="dbo" store:Type="Tables" />
+    <EntitySet Name="tEvent" EntityType="Self.tEvent" Schema="dbo" store:Type="Tables" />
+    <EntitySet Name="tEventRegister" EntityType="Self.tEventRegister" Schema="dbo" store:Type="Tables" />
+    <EntitySet Name="tForum" EntityType="Self.tForum" Schema="dbo" store:Type="Tables" />
+    <EntitySet Name="tForumComment" EntityType="Self.tForumComment" Schema="dbo" store:Type="Tables" />
+    <EntitySet Name="tIncome" EntityType="Self.tIncome" Schema="dbo" store:Type="Tables" />
+    <EntitySet Name="tMail" EntityType="Self.tMail" Schema="dbo" store:Type="Tables" />
+    <EntitySet Name="tManagementFee" EntityType="Self.tManagementFee" Schema="dbo" store:Type="Tables" />
+    <EntitySet Name="tMemberData" EntityType="Self.tMemberData" Schema="dbo" store:Type="Tables" />
+    <EntitySet Name="tNaturalGas" EntityType="Self.tNaturalGas" Schema="dbo" store:Type="Tables" />
+    <EntitySet Name="tPay" EntityType="Self.tPay" Schema="dbo" store:Type="Tables" />
+    <EntitySet Name="tReservation" EntityType="Self.tReservation" Schema="dbo" store:Type="Tables" />
+    <EntitySet Name="tReservationTime" EntityType="Self.tReservationTime" Schema="dbo" store:Type="Tables" />
+    <EntitySet Name="tUserVote" EntityType="Self.tUserVote" Schema="dbo" store:Type="Tables" />
+    <EntitySet Name="tVote" EntityType="Self.tVote" Schema="dbo" store:Type="Tables" />
+    <AssociationSet Name="FK__tAnnounce__fUser__2D27B809" Association="Self.FK__tAnnounce__fUser__2D27B809">
+      <End Role="tMemberData" EntitySet="tMemberData" />
+      <End Role="tAnnouncement" EntitySet="tAnnouncement" />
+    </AssociationSet>
+    <AssociationSet Name="FK__tCandidat__fUser__48CFD27E" Association="Self.FK__tCandidat__fUser__48CFD27E">
+      <End Role="tMemberData" EntitySet="tMemberData" />
+      <End Role="tCandidate" EntitySet="tCandidate" />
+    </AssociationSet>
+    <AssociationSet Name="FK__tCandidate__fVId__49C3F6B7" Association="Self.FK__tCandidate__fVId__49C3F6B7">
+      <End Role="tVote" EntitySet="tVote" />
+      <End Role="tCandidate" EntitySet="tCandidate" />
+    </AssociationSet>
+    <AssociationSet Name="FK__tCargo__fUserId__440B1D61" Association="Self.FK__tCargo__fUserId__440B1D61">
+      <End Role="tMemberData" EntitySet="tMemberData" />
+      <End Role="tCargo" EntitySet="tCargo" />
+    </AssociationSet>
+    <AssociationSet Name="FK__tEvent__fUserId__267ABA7A" Association="Self.FK__tEvent__fUserId__267ABA7A">
+      <End Role="tMemberData" EntitySet="tMemberData" />
+      <End Role="tEvent" EntitySet="tEvent" />
+    </AssociationSet>
+    <AssociationSet Name="FK__tEventReg__fEven__29572725" Association="Self.FK__tEventReg__fEven__29572725">
+      <End Role="tEvent" EntitySet="tEvent" />
+      <End Role="tEventRegister" EntitySet="tEventRegister" />
+    </AssociationSet>
+    <AssociationSet Name="FK__tEventReg__fUser__2A4B4B5E" Association="Self.FK__tEventReg__fUser__2A4B4B5E">
+      <End Role="tMemberData" EntitySet="tMemberData" />
+      <End Role="tEventRegister" EntitySet="tEventRegister" />
+    </AssociationSet>
+    <AssociationSet Name="FK__tForum__fUserId__36B12243" Association="Self.FK__tForum__fUserId__36B12243">
+      <End Role="tMemberData" EntitySet="tMemberData" />
+      <End Role="tForum" EntitySet="tForum" />
+    </AssociationSet>
+    <AssociationSet Name="FK__tForumCom__fForu__3A81B327" Association="Self.FK__tForumCom__fForu__3A81B327">
+      <End Role="tForum" EntitySet="tForum" />
+      <End Role="tForumComment" EntitySet="tForumComment" />
+    </AssociationSet>
+    <AssociationSet Name="FK__tForumCom__fUser__398D8EEE" Association="Self.FK__tForumCom__fUser__398D8EEE">
+      <End Role="tMemberData" EntitySet="tMemberData" />
+      <End Role="tForumComment" EntitySet="tForumComment" />
+    </AssociationSet>
+    <AssociationSet Name="FK__tMail__fReceiver__30F848ED" Association="Self.FK__tMail__fReceiver__30F848ED">
+      <End Role="tMemberData" EntitySet="tMemberData" />
+      <End Role="tMail" EntitySet="tMail" />
+    </AssociationSet>
+    <AssociationSet Name="FK__tMail__fSenderId__300424B4" Association="Self.FK__tMail__fSenderId__300424B4">
+      <End Role="tMemberData" EntitySet="tMemberData" />
+      <End Role="tMail" EntitySet="tMail" />
+    </AssociationSet>
+    <AssociationSet Name="FK__tManageme__fUser__33D4B598" Association="Self.FK__tManageme__fUser__33D4B598">
+      <End Role="tMemberData" EntitySet="tMemberData" />
+      <End Role="tManagementFee" EntitySet="tManagementFee" />
+    </AssociationSet>
+    <AssociationSet Name="FK__tNaturalG__fUser__412EB0B6" Association="Self.FK__tNaturalG__fUser__412EB0B6">
+      <End Role="tMemberData" EntitySet="tMemberData" />
+      <End Role="tNaturalGas" EntitySet="tNaturalGas" />
+    </AssociationSet>
+    <AssociationSet Name="FK__tReservat__fRese__5441852A" Association="Self.FK__tReservat__fRese__5441852A">
+      <End Role="tReservationTime" EntitySet="tReservationTime" />
+      <End Role="tReservation" EntitySet="tReservation" />
+    </AssociationSet>
+    <AssociationSet Name="FK__tReservat__fUser__534D60F1" Association="Self.FK__tReservat__fUser__534D60F1">
+      <End Role="tMemberData" EntitySet="tMemberData" />
+      <End Role="tReservation" EntitySet="tReservation" />
+    </AssociationSet>
+    <AssociationSet Name="FK__tUserVote__fSele__4E88ABD4" Association="Self.FK__tUserVote__fSele__4E88ABD4">
+      <End Role="tCandidate" EntitySet="tCandidate" />
+      <End Role="tUserVote" EntitySet="tUserVote" />
+    </AssociationSet>
+    <AssociationSet Name="FK__tUserVote__fUser__4CA06362" Association="Self.FK__tUserVote__fUser__4CA06362">
+      <End Role="tMemberData" EntitySet="tMemberData" />
+      <End Role="tUserVote" EntitySet="tUserVote" />
+    </AssociationSet>
+    <AssociationSet Name="FK__tUserVote__fVId__4D94879B" Association="Self.FK__tUserVote__fVId__4D94879B">
+      <End Role="tVote" EntitySet="tVote" />
+      <End Role="tUserVote" EntitySet="tUserVote" />
+    </AssociationSet>
+  </EntityContainer>
+</Schema>

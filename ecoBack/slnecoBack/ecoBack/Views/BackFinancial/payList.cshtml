@@ -1,0 +1,124 @@
+﻿
+@{
+    ViewBag.Title = "payList";
+}
+
+<h2>payList</h2>
+<link rel="stylesheet" href="~/style/B_payKeyIn.css">
+<link rel="stylesheet" href="~/style/payList.css">
+<nav>
+    <button id="add">A.新增</button>
+    <button id="modify">M.修改</button>
+    <button id="delete">D.刪除</button>
+</nav>
+<form action="">
+    <label for="numData">
+        顯示
+        <select name="numData" id="numData">
+            <option value="10">10</option>
+            <option value="25">25</option>
+            <option value="50">50</option>
+        </select>
+        資料
+    </label>
+    <label for="fromD">開始日期:</label>
+    <input id="fromD" type="date" name="fromD">
+    <label for="endD">結束日期:</label>
+    <input id="endD" type="date" name="endD">
+    <label for="type">類別:</label>
+    <select name="type" id="type">
+        <option value="all">全部</option>
+        <option value="fix">修繕</option>
+        <option value="activity">活動</option>
+        <option value="human">人事</option>
+        <option value="incidental">雜費</option>
+    </select>
+    <input type="search" name="search" id="search" class="light-table-filter" data-table="order-table" placeholder="  輸入關鍵字">
+    <input type="submit" value="查詢">
+</form>
+
+
+<table class="order-table">
+    <thead>
+        <tr>
+            <th>流水編號</th>
+            <th>日期</th>
+            <th>類別</th>
+            <th>廠商名稱</th>
+            <th>廠商電話-</th>
+            <th>品名</th>
+            <th>用途-</th>
+            <th>數量</th>
+            <th>價格</th>
+            <th>稅別-</th>
+            <th>付款方式-</th>
+            <th>小計</th>
+            <th>購買人</th>
+        </tr>
+    </thead>
+    <tbody>
+        <tr>
+            <td>001</td>
+            <td>2020/05/08</td>
+            <td>活動</td>
+            <td>阿美滷肉飯</td>
+            <td>66316666</td>
+            <td>滷肉飯</td>
+            <td>活動供餐</td>
+            <td>50</td>
+            <td>25</td>
+            <td>免稅</td>
+            <td>現金</td>
+            <td>1250</td>
+            <td>小美</td>
+        </tr>
+        <tr>
+            <td>002</td>
+            <td>2020/06/08</td>
+            <td>修繕</td>
+            <td>阿朱電梯</td>
+            <td>37856945</td>
+            <td>電梯檢修</td>
+            <td>定期檢查</td>
+            <td>1</td>
+            <td>4000</td>
+            <td>應稅</td>
+            <td>月結</td>
+            <td>4000</td>
+            <td>小朱</td>
+        </tr>
+        <tr>
+            <td>003</td>
+            <td>2020/08/08</td>
+            <td>人事</td>
+            <td>阿花人力派遣</td>
+            <td>78945213</td>
+            <td>打掃阿姨</td>
+            <td>環境清潔</td>
+            <td>3</td>
+            <td>3000</td>
+            <td>應稅</td>
+            <td>月結</td>
+            <td>9000</td>
+            <td>小花</td>
+        </tr>
+        <tr>
+            <td>004</td>
+            <td>2020/07/08</td>
+            <td>雜費</td>
+            <td>阿明五金行</td>
+            <td>56248596</td>
+            <td>塑膠椅</td>
+            <td>中秋烤肉使用</td>
+            <td>50</td>
+            <td>60</td>
+            <td>免稅</td>
+            <td>現金</td>
+            <td>3000</td>
+            <td>小明</td>
+        </tr>
+    </tbody>
+</table>
+<div id="payChart" style="margin: 0 auto; width: 900px;height: 500px;"></div>
+<script src="~/js/payList.js"></script>
+<script src="~/js/payPie.js"></script>

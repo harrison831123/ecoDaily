@@ -1,0 +1,47 @@
+<?xml version="1.0" encoding="utf-8"?>
+<edmx:Edmx Version="3.0" xmlns:edmx="http://schemas.microsoft.com/ado/2009/11/edmx">
+ <!-- EF Designer content (DO NOT EDIT MANUALLY BELOW HERE) -->
+  <edmx:Designer xmlns="http://schemas.microsoft.com/ado/2009/11/edmx">
+    <!-- Diagram content (shape and connector positions) -->
+    <edmx:Diagrams>
+      <Diagram DiagramId="fb99a149529a4820bdf5d4606a9316aa" Name="Diagram1">
+        <EntityTypeShape EntityType="dbecoDailyModel.tAnnouncement" Width="1.5" PointX="3" PointY="5.625" IsExpanded="true" />
+        <EntityTypeShape EntityType="dbecoDailyModel.tCandidate" Width="1.5" PointX="6" PointY="15.875" IsExpanded="true" />
+        <EntityTypeShape EntityType="dbecoDailyModel.tCargo" Width="1.5" PointX="3" PointY="12.125" IsExpanded="true" />
+        <EntityTypeShape EntityType="dbecoDailyModel.tEvent" Width="1.5" PointX="3" PointY="15.5" IsExpanded="true" />
+        <EntityTypeShape EntityType="dbecoDailyModel.tEventRegister" Width="1.5" PointX="8.25" PointY="15.25" IsExpanded="true" />
+        <EntityTypeShape EntityType="dbecoDailyModel.tForum" Width="1.5" PointX="3" PointY="20" IsExpanded="true" />
+        <EntityTypeShape EntityType="dbecoDailyModel.tForumComment" Width="1.5" PointX="5.25" PointY="20" IsExpanded="true" />
+        <EntityTypeShape EntityType="dbecoDailyModel.tIncome" Width="1.5" PointX="0.75" PointY="0.75" IsExpanded="true" />
+        <EntityTypeShape EntityType="dbecoDailyModel.tMail" Width="1.5" PointX="3" PointY="23.625" IsExpanded="true" />
+        <EntityTypeShape EntityType="dbecoDailyModel.tManagementFee" Width="1.5" PointX="3" PointY="27" IsExpanded="true" />
+        <EntityTypeShape EntityType="dbecoDailyModel.tMemberData" Width="1.5" PointX="0.75" PointY="13.25" IsExpanded="true" />
+        <EntityTypeShape EntityType="dbecoDailyModel.tNaturalGas" Width="1.5" PointX="3" PointY="29.625" IsExpanded="true" />
+        <EntityTypeShape EntityType="dbecoDailyModel.tPay" Width="1.5" PointX="5.75" PointY="0.75" IsExpanded="true" />
+        <EntityTypeShape EntityType="dbecoDailyModel.tReservation" Width="1.5" PointX="6" PointY="11.75" IsExpanded="true" />
+        <EntityTypeShape EntityType="dbecoDailyModel.tReservationTime" Width="1.5" PointX="3.75" PointY="9.25" IsExpanded="true" />
+        <EntityTypeShape EntityType="dbecoDailyModel.tUserVote" Width="1.5" PointX="11.25" PointY="16" IsExpanded="true" />
+        <EntityTypeShape EntityType="dbecoDailyModel.tVote" Width="1.5" PointX="3.75" PointY="2" IsExpanded="true" />
+        <AssociationConnector Association="dbecoDailyModel.FK__tAnnounce__fUser__2D27B809" ManuallyRouted="false" />
+        <AssociationConnector Association="dbecoDailyModel.FK__tCandidat__fUser__48CFD27E" ManuallyRouted="false" />
+        <AssociationConnector Association="dbecoDailyModel.FK__tCandidate__fVId__49C3F6B7" ManuallyRouted="false" />
+        <AssociationConnector Association="dbecoDailyModel.FK__tUserVote__fSele__4E88ABD4" ManuallyRouted="false" />
+        <AssociationConnector Association="dbecoDailyModel.FK__tCargo__fUserId__440B1D61" ManuallyRouted="false" />
+        <AssociationConnector Association="dbecoDailyModel.FK__tEvent__fUserId__267ABA7A" ManuallyRouted="false" />
+        <AssociationConnector Association="dbecoDailyModel.FK__tEventReg__fEven__29572725" ManuallyRouted="false" />
+        <AssociationConnector Association="dbecoDailyModel.FK__tEventReg__fUser__2A4B4B5E" ManuallyRouted="false" />
+        <AssociationConnector Association="dbecoDailyModel.FK__tForum__fUserId__36B12243" ManuallyRouted="false" />
+        <AssociationConnector Association="dbecoDailyModel.FK__tForumCom__fForu__3A81B327" ManuallyRouted="false" />
+        <AssociationConnector Association="dbecoDailyModel.FK__tForumCom__fUser__398D8EEE" ManuallyRouted="false" />
+        <AssociationConnector Association="dbecoDailyModel.FK__tMail__fReceiver__30F848ED" ManuallyRouted="false" />
+        <AssociationConnector Association="dbecoDailyModel.FK__tMail__fSenderId__300424B4" ManuallyRouted="false" />
+        <AssociationConnector Association="dbecoDailyModel.FK__tManageme__fUser__33D4B598" ManuallyRouted="false" />
+        <AssociationConnector Association="dbecoDailyModel.FK__tNaturalG__fUser__412EB0B6" ManuallyRouted="false" />
+        <AssociationConnector Association="dbecoDailyModel.FK__tReservat__fUser__534D60F1" ManuallyRouted="false" />
+        <AssociationConnector Association="dbecoDailyModel.FK__tUserVote__fUser__4CA06362" ManuallyRouted="false" />
+        <AssociationConnector Association="dbecoDailyModel.FK__tReservat__fRese__5441852A" ManuallyRouted="false" />
+        <AssociationConnector Association="dbecoDailyModel.FK__tUserVote__fVId__4D94879B" ManuallyRouted="false" />
+      </Diagram>
+    </edmx:Diagrams>
+  </edmx:Designer>
+</edmx:Edmx>

@@ -1,0 +1,186 @@
+﻿<!DOCTYPE html>
+<html>
+<head>
+    <meta charset="utf-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>@ViewBag.Title - My ASP.NET Application</title>
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
+    <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.4.1/css/bootstrap.min.css"
+          integrity="sha384-Vkoo8x4CGsO3+Hhxv8T/Q5PaXtkKtu6ug5TOeNV6gBiFeWPGFN9MuhOf23Q9Ifjh" crossorigin="anonymous">
+    <link rel="stylesheet" href="~/style/e-community.css">
+    <script src="~/js/echarts.min.js"></script>
+</head>
+<body>
+    <header class="d-flex">
+        <a class="logo col-2" href="homepage.html"><span>E-<b>Community</b></span></a>
+        <nav class="col-10">
+            <ul class="nav justify-content-end mt-1">
+                <li class="nav-item notifications">
+                    <div class="dropdown">
+                        <button class="btn  text-light" type="button" id="dropdownMenuButton" data-toggle="dropdown"
+                                aria-haspopup="true" aria-expanded="false">
+                            <i class="fa fa-bell-o"></i>
+                            <span class="label bg-danger">5</span>
+                        </button>
+                        <ul class="dropdown-menu">
+                            <li class="header">You have 10 notifications</li>
+                            <li>
+                                <!-- inner menu: contains the actual data -->
+                                <ul class="menu">
+                                    <li class="message">
+                                        <a href="#">
+                                            <div class="pull-left">
+                                                <i class="fa fa-users mr-2 text-primary"></i>
+                                            </div>
+                                            <h6>
+                                                5 member join today
+                                            </h6>
+                                        </a>
+                                    </li>
+                                    <li class="message">
+                                        <a href="#">
+                                            <div class="pull-left">
+                                                <i class="fa fa-warning mr-2 text-danger"></i>
+                                            </div>
+                                            <h6>
+                                                Very long description here that may not fit into the page and may cause
+                                                design problems
+                                            </h6>
+                                        </a>
+                                    </li>
+                                    <li class="message">
+                                        <a href="#">
+                                            <div class="pull-left">
+                                                <i class="fa fa-users mr-2 text-warning"></i>
+                                            </div>
+                                            <h6>
+                                                5 new members joined
+                                            </h6>
+
+                                        </a>
+                                    </li>
+                                    <li class="message">
+                                        <a href="#">
+                                            <div class="pull-left">
+                                                <i class="fa fa-shopping-cart mr-2 text-success"></i>
+                                            </div>
+                                            <h6>
+                                                25 sales made
+                                            </h6>
+                                        </a>
+                                    </li>
+                                    <li class="message">
+                                        <a href="#">
+                                            <div class="pull-left">
+                                                <i class="fa fa-user mr-2 text-danger"></i>
+                                            </div>
+                                            <h6>
+                                                You changed your username
+                                            </h6>
+                                        </a>
+                                    </li>
+                                    <li class="message footer pt-2"><a href="#">View All</a></li>
+                                </ul>
+                            </li>
+                        </ul>
+                    </div>
+                </li>
+                <li class="nav-item profile">
+                    <div class="dropdown">
+                        <button class="btn  text-light" type="button" id="dropdownMenuButton" data-toggle="dropdown"
+                                aria-haspopup="true" aria-expanded="false">
+                            <img class="topImg" src="~/image/adult-attractive-beautiful-beauty-415829.jpg" alt="">
+                            <span>Jenny</span>
+                        </button>
+                        <ul class="dropdown-menu">
+                            <li>
+                                <!-- inner menu: contains the actual data -->
+                                <ul class="menu userDrop">
+                                    <li class="userHeader">
+                                        <img class="headerImg img-circle" src="~/image/adult-attractive-beautiful-beauty-415829.jpg"
+                                             alt="User Image">
+                                        <h6>
+                                            Park Jenny- <small>H302</small>
+                                        </h6>
+                                    </li>
+                                    <li class="userBody">
+                                        <div class="d-flex justify-content-around">
+                                            <h6>followers</h6>
+                                            <h6>sales</h6>
+                                            <h6>friends</h6>
+                                        </div>
+                                    </li>
+                                    <li class="userFooter">
+                                        <div class="d-flex justify-content-around">
+                                            <h6>profile</h6>
+                                            <h6>sign out</h6>
+                                        </div>
+                                    </li>
+                                </ul>
+                            </li>
+                        </ul>
+                    </div>
+                </li>
+            </ul>
+        </nav>
+    </header>
+    <div class="d-flex">
+        <aside class="sidenav col-2">
+            <section class="sidebar">
+                <img class="sideImg" src="~/image/adult-attractive-beautiful-beauty-415829.jpg" alt="">
+                <p class="navName">Jenny</p>
+                <a href="Announcement_B.html">社區公告</a>
+                <a href="event_B.html">社區活動</a>
+                <button class="dropdown-btn">
+                    財務系統
+                    <i class="fa fa-caret-down"></i>
+                </button>
+                <div class="dropdown-container fin">
+                    @Html.ActionLink("管理費", "managementFee", "BackFinancial")
+                    @Html.ActionLink("支出", "payList", "BackFinancial")
+                    @Html.ActionLink("收入", "incomeList", "BackFinancial")
+                    @Html.ActionLink("支出總表", "financialList", "BackFinancial")
+                    @Html.ActionLink("瓦斯抄表", "gasData", "BackFinancial")
+                </div>
+                <a href="personalMessage_B.html">訊息中心</a>
+                <!-- 下拉式選單 -->
+                <button class="dropdown-btn">
+                    生活服務
+                    <i class="fa fa-caret-down"></i>
+                </button>
+                <div class="dropdown-container fin">
+                    <a class="third" href="/Live_Service/Reservation_B.html">公共建設</a>
+                    <a class="third" href="#">預約服務</a>
+                </div>
+                <!--  -->
+                <a href="voteList.html">投票</a>
+                <a href="Forum_B.html">討論區</a>
+                <a href="postal_B.html">郵務管理</a>
+                <a href="calendar_B.html">社區行事曆</a>
+            </section>
+        </aside>
+
+        <main class="col-10">
+            <div class="container body-content">
+                @RenderBody()
+                <hr />
+                <footer>
+                    <p>&copy; @DateTime.Now.Year - My ASP.NET Application</p>
+                </footer>
+            </div>
+        </main>
+    </div>
+    <script src="https://code.jquery.com/jquery-3.4.1.slim.min.js"
+            integrity="sha384-J6qa4849blE2+poT4WnyKhv5vZF5SrPo0iEjwBvKU7imGFAV0wwj1yYfoRSJoZ+n"
+            crossorigin="anonymous"></script>
+    <script src="https://cdn.jsdelivr.net/npm/popper.js@1.16.0/dist/umd/popper.min.js"
+            integrity="sha384-Q6E9RHvbIyZFJoft+2mJbHaEWldlvI9IOYy5n3zV9zzTtmI3UksdQRVvoxMfooAo"
+            crossorigin="anonymous"></script>
+    <script src="https://stackpath.bootstrapcdn.com/bootstrap/4.4.1/js/bootstrap.min.js"
+            integrity="sha384-wfSDF2E50Y2D1uUdj0O3uMBJnjuUD4Ih7YwaYd1iqfktj0Uod8GCExl3Og8ifwB6"
+            crossorigin="anonymous"></script>
+    <script src="~/js/toggle.js"></script>
+    <script src="~/Scripts/jquery-3.4.1.min.js"></script>
+    <script src="~/Scripts/bootstrap.min.js"></script>
+</body>
+</html>
